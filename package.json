@@ -1,0 +1,14 @@
+{
+  "name": "jogoteste",
+  "version": "1.0.0",
+  "description": "teste de programação através de um jogo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jefferson Reis",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
