@@ -10,14 +10,17 @@ app.listen(8080, () => {
 app.get("/jogo/:numerointeracoes", (req,res) => {
 
     let numerointeracoes = req.params.numerointeracoes;
+
     let print;
-    let str = numerointeracoes; 
-    let res = str.substr();
     
 //o if deve selecionar os numeros multiplos de 7 e todos os numeros que tenham 7
     for (i = 0; i <= numerointeracoes; i++) {
+        
+        let a = i.toString();
+        let separado = a.split(''); // isso faz algum sentido? poderia usar o lenght = -1?
 
-        if(i % 7 === 0){
+      
+        if(a % 7 === 0 &&  (separado.indexOf('7'))){
 
             print += 'pi \n\n';
     
@@ -25,7 +28,7 @@ app.get("/jogo/:numerointeracoes", (req,res) => {
         
         else{
             
-            print += i + ' \n\n';
+            print += a + ' \n\n';
         }
 
         
@@ -35,4 +38,5 @@ app.get("/jogo/:numerointeracoes", (req,res) => {
 
 
 })
+
 
